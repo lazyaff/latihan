@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="id">
+   <head>
+      <title>makan bang</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+         table,th,td { 
+            border: 1px solid black; 
+         } 
+         th,td {
+            padding: 5px;
+         }
+         #ts table, #ts th, #ts td {
+            border: 3px solid black; 
+            border-collapse: collapse;
+         }
+         #ts tr:nth-child(even) {
+            background-color: #bebebe
+         }
+         #ts tr:nth-child(odd) {
+            background-color: #a0a0a0
+         }
+         #ts th {
+            background-color: black;
+            color: white;
+         }
+         .contoh {
+            background-color: black;
+            color: white;
+         }
+         .lagi {
+            text-align: center;
+         }
+         #contohid {
+            background-color: coral;
+            color: darkgreen;
+            border: 5px solid black;
+         }
+      </style> 
+   </head>
+   <body style="background-color: lightskyblue;">
+      <h1 style="text-align:center;">Belajar Web Programming</h1>
+         <h2>Paragraph</h3>
+            <p>1. ini paragraf biasa<br>ini di atasnya pake line break (br)</p>
+            <pre>2. kalo   yang ini pake
+               pre jadi gak butuh<br>line break (br)</pre>
+            <hr>
+         <h2>Styles</h2>
+            <p style="background-color:whitesmoke;">1. Ini buat warna background</p>
+            <p style="color:purple;">2. Ini buat warna text</p>
+            <p style="border:1px solid goldenrod;">3. Ini buat text border</p>
+            <p style="font-family:algerian;">4. Ini buat jenis font</p>
+            <p style="font-size:150%;">5. Ini font size</p>
+            <hr>
+         <h2>Formatting</h2>
+            <p>1. Ini contoh yang pake <b>bold (b)</b> kalo ini pake <strong>important (strong)</strong></p>
+            <p>2. Ini contoh yang pake <i>italic (i)</i> kalo ini pake <em>emphasized (em)</em></p>
+            <p>3. Ini contoh yang pake <mark>marked (mark) kaya stabilo</mark></p>
+            <p>4. Ini contoh yang pake <del>deleted (del) kaya cross line</del></p>
+            <p>5. Ini contoh yang pake <ins>inserted (ins) kaya underline</ins></p>
+            <p>6. Ini contoh yang pake <small>small teksnya lebih kecil</small></p>
+            <p>7. Ini contoh yang pake <sub>subscript (sub)</sub></p>
+            <p>8. Ini contoh yang pake <sup>superscript (sup)</sup></p>
+            <hr>
+         <h2>Quotation and Citation Elements</h2>
+            <p>1. Ini buat quote yang panjang pake blockquote, ditulis di baris baru dan agak masuk kedalam :
+               <blockquote>Aku seorang kapiten. Mempunyai pedang panjang. Kalau berjalan prok prok prok. </blockquote></p>
+            <p>2. Ini buat quote yang pendek pake q, ditulis diantara petik dua :
+                <q>Nenek moyangku seorang pelaut.</q></p>
+            <p>3. Ini buat singkatan pake abbr, ditulis kaya ada garis bawahnya : 
+               <abbr title="Universitas Jenderal Soedirman">Unsoed</abbr> berada di purwokerto.</p>
+            <p>4. Ini bisa buat alamat, email, nomor telpon, link, dsb pake address, ditulis italic :
+               <address>Faizal Amri<br> Visit me at:<br> www.ijal.com<br> PO Box 645, Purwokerto<br>08521934768</address></p>
+            <p>5. Ini buat nama karya pake cite, ditulis italic :
+               <cite>Monalisa</cite> adalah karya Da Vinci.</p>
+            <p>6. Ini buat ngatur penulisan dari mana kemana pake bdo : 
+               <bdo dir="rtl">inih kebalik</bdo>, <bdo dir="ltr">kalo ini engga</bdo></p>
+            <hr>
+         <h2>Color</h2>
+            <b>1. RGB adn RGBA</b>
+               <p>a. RGB (Red Green Blue) : </p><blockquote>
+                  <p style="background-color: rgb(255,0,0);">Merah</p>
+                  <p style="background-color: rgb(255,255,0);">Kuning</p>
+                  <p style="background-color: rgb(0,255,0);">Hijau</p></blockquote>
+               <p>b. RGBA (Red Green Blue Alpha) : </p><blockquote>
+                  <p style="background-color: rgba(0,0,255,1);">Alpha 1</p>
+                  <p style="background-color: rgba(0,0,255,0.9);">Alpha 0.9</p>
+                  <p style="background-color: rgba(0,0,255,0.8);">Alpha 0.8)</p>
+                  <p style="background-color: rgba(0,0,255,0.7);">Alpha 0.7</p>
+                  <p style="background-color: rgba(0,0,255,0.6);">Alpha 0.6</p>
+                  <p style="background-color: rgba(0,0,255,0.5);">Alpha 0.5</p>
+                  <p style="background-color: rgba(0,0,255,0.4);">Alpha 0.4</p>
+                  <p style="background-color: rgba(0,0,255,0.3);">Alpha 0.3</p>
+                  <p style="background-color: rgba(0,0,255,0.2);">Alpha 0.2</p>
+                  <p style="background-color: rgba(0,0,255,0.1);">Alpha 0.1</p>
+                  <p style="background-color: rgba(0,0,255,0);">Alpha 0</p></blockquote>
+            <b>2. HEX</b>
+                  <p>HEX (Hexadecimal) ditulis #rrggbb : </p><blockquote>
+                     <p style="background-color:#ff0000;">Merah</p>
+                     <p style="background-color:#ffff00;">Kuning</p>
+                     <p style="background-color:#00ff00;">Hijau</p></blockquote>
+            <b>3. HSL</b>
+                  <p id="HSLm">a. HSL (Hue Saturation Lightness) : </p> <blockquote>
+                     <p>Hue</p>
+                     <p style="background-color: hsl(0, 100%, 50%);">Merah</p>
+                     <p style="background-color: hsl(60, 100%, 50%);">Kuning</p>
+                     <p style="background-color: hsl(120, 100%, 50%);">Hijau</p>
+                     <p>Saturation</p>
+                     <p style="background-color: hsl(240, 100%, 50%);">Saturation 100%</p>
+                     <p style="background-color: hsl(240, 90%, 50%);">Saturation 90%</p>
+                     <p style="background-color: hsl(240, 80%, 50%);">Saturation 80%</p>
+                     <p style="background-color: hsl(240, 70%, 50%);">Saturation 70%</p>
+                     <p style="background-color: hsl(240, 60%, 50%);">Saturation 60%</p>
+                     <p style="background-color: hsl(240, 50%, 50%);">Saturation 50%</p>
+                     <p style="background-color: hsl(240, 40%, 50%);">Saturation 40%</p>
+                     <p style="background-color: hsl(240, 20%, 50%);">Saturation 20%</p>
+                     <p style="background-color: hsl(240, 0%, 50%);">Saturation 0%</p>
+                     <p>Lightness</p>
+                     <p style="background-color: hsl(240, 100%, 100%);">Lightness 100%)</p>
+                     <p style="background-color: hsl(240, 100%, 90%);">Lightness 90%)</p>
+                     <p style="background-color: hsl(240, 100%, 80%);">Lightness 80%)</p>
+                     <p style="background-color: hsl(240, 100%, 70%);">Lightness 70%)</p>
+                     <p style="background-color: hsl(240, 100%, 60%);">Lightness 60%)</p>
+                     <p style="background-color: hsl(240, 100%, 50%);">Lightness 50%)</p>
+                     <p style="background-color: hsl(240, 100%, 40%);">Lightness 40%)</p>
+                     <p style="background-color: hsl(240, 100%, 30%);">Lightness 30%)</p>
+                     <p style="background-color: hsl(240, 100%, 20%);">Lightness 20%)</p>
+                     <p style="background-color: hsl(240, 100%, 10%);">Lightness 10%)</p>
+                     <p style="background-color: hsl(240, 100%, 0%);">Lightness 0%)</p></blockquote>
+                  <p>b. HSLA (Hue Saturation Lightness Alpha) : </p> <blockquote>
+                     <p style="background-color: hsla(240, 100%, 50%, 1);">Alpha 1</p>
+                     <p style="background-color: hsla(240, 100%, 50%, 0.9);">Alpha 0.9</p>
+                     <p style="background-color: hsla(240, 100%, 50%, 0.8);">Alpha 0.8</p>
+                     <p style="background-color: hsla(240, 100%, 50%, 0.7);">Alpha 0.7</p>
+                     <p style="background-color: hsla(240, 100%, 50%, 0.6);">Alpha 0.6</p>
+                     <p style="background-color: hsla(240, 100%, 50%, 0.5);">Alpha 0.5</p>
+                     <p style="background-color: hsla(240, 100%, 50%, 0.4);">Alpha 0.4</p>
+                     <p style="background-color: hsla(240, 100%, 50%, 0.3);">Alpha 0.3</p>
+                     <p style="background-color: hsla(240, 100%, 50%, 0.2);">Alpha 0.2</p>
+                     <p style="background-color: hsla(240, 100%, 50%, 0.1);">Alpha 0.1</p>
+                     <p style="background-color: hsla(240, 100%, 50%, 0);">Alpha 0</p></blockquote>
+            <hr>
+         <h2>CSS</h2>
+            <p>Ada 3 cara pake CSS (Cascading Style Sheet) :<br>
+                  <b>1. Inline</b>   : Langsung didalem HTML elements<br>
+                  <b>2. Internal</b> : Tulis di dalem head<br>
+                  <b>3. External</b> : Import dari file lain berformat .css pake command <.link><br><br>
+               beberapa penggunaan CSS : </p>
+                  <p style="background-color:silver;">1. Warna background</p>
+                  <p style="color:red;">2. Warna text</p>
+                  <p style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">3. Jenis font</p>
+                  <p style="font-size:120%;">4. Font size</p> 
+                  <p style="border:2px solid limegreen;">5. Text border</p>  
+                  <p style="border:2px solid limegreen;padding: 20px;">6. Padding (space inside the border)</p>
+                  <p style="border:2px solid limegreen;margin:20px;">7. Margin (space outside the border)</p>                 
+            <hr>
+         <h2>Links</h2>
+            <p>1. Ini link biasa : <a href="coy.html">Klik disini untuk ke google</a></p>
+            <p>2. Ini link pake gambar : <a href="coy.html"> <img src="pic/logo.jpg" style="width:42px;height:42px;;" alt="cnatik;"></a></p>
+            <p>3. Ini link pake button : <button onclick="document.location='coy.html'">ini tombol</button></p>
+            <p>4. Ini link buat kirim email : <a href="mailto:faizalamri15@gmail.com">kirim email</a></p>
+            <p>5. Ini link yang ada tittle nya : <a href="coy.html" title="jangan di klik bro nanti nyesel">Klik disini</a></p>
+            <p>6. Ini link menuju bookmark (HSL mark) : <a href="#HSLm">menuju HSL Chapter</a></p>
+            <p>Ada beberapa tipe berdasarkan dimana dia dibuka (target)</p><blockquote>
+               <p>1. _self - dibuka di windows/tab yang sama (default) : <a href="coy.html" target="_self">contoh</a> atau <a href="coy.html">contoh</a></p>
+               <p>2. _blank - dibuka di tab baru : <a href="coy.html" target="_blank">contoh</a></p>
+               <p>3. _parent - belum tau : <a href="coy.html" target="_parent;">contoh</a></p>
+               <p>4. _top - belum tau juga : <a href="coy.html" target="_top">contoh</a></p></blockquote>  
+            <p>Ada 2 tipe berdasarkan linknya</p><blockquote>
+               <p>1. Absolute URL - link lengkap : <a href="www.google.com">contoh</a></p>
+               <p>2. Relative URL - link dari website yang sama, ditulis tanpa https://wwww. : <a href="coy.html">contoh</a></p></blockquote>   
+            <hr>
+         <h2>Images</h2>
+            <p>1. Image biasa :</p>
+               <img src="bocil.jpg" alt="cantik" style="width:160px;height:160px">
+            <p>2. Image di sub folder :</p>
+               <img src="pic/bocil.jpg" alt="cantik" style="width:160px;height:160px">
+            <p>3. Image tidak ditemukan :</p>
+               <img src="pic/bocilq.jpg" alt="cantik" style="width:160px;height:160px">
+            <p>4. Image sebagai link : </p>
+               <a href="coy.html"><img src="pic/logo.jpg" alt="masuk pak eko" style="width: 40px;height: 40px;"></a>
+            <p>5. Image floating :</p>
+               <p><img src="pic/bocil.jpg" alt="cantik" style="float:left;width:160px;height:160px">Ini calon istri saya</p>
+            <br><br><br><br><br><br><br>
+            <p>6. Image map and area (clickable image) : coba klik mukanya</p>
+               <img src="pic/bocil.jpg" alt="cantik" usemap="#muka">
+               <map name="muka">
+                   <area shape="circle" coords="300,165,117" target="_blank" alt="wajah" href="coy.html"> 
+                   <area shape="poly" coords="200,400,450,400,450,550,200,550" onclick="sopan()"> </map>
+                     <script> function sopan() {
+                        alert("Jangan pegang-pegang, sopan kh bgitu?");
+                     } </script>
+            <p>7. Image sebagai background : </p>
+               <blockquote>
+                  <div style="background-image: url(pic/mipa.jpg); background-repeat: no-repeat; background-attachment:local; background-size: cover;">
+                     <p>Aku seorang kapitan
+                     <br>Mempunyai pedang panjang
+                     <br>Kalau berjalan prok prok prok
+                     <br>Aku seorang kapitan</p>
+                  </div> 
+               </blockquote>
+            <p>8. Picture element (berubah mengikuti ukuran layar) : </p>
+               <picture>
+                  <source media="(min-width:650px)" srcset="pic/mipa.jpg">
+                  <source media="(min-width:465px)" srcset="pic/bocil.jpg">
+                  <img src="pic/logo.jpg">
+               </picture>
+            <hr>
+         <h2>Table</h2>
+            <p>1. Tabel dengan border biasa
+               <table>
+                  <caption>Data Pengurus</caption>
+                  <tr>
+                     <th>ID</th>                     
+                     <th>Nama</th>
+                     <th>Divisi</th>
+                  </tr>
+                  <tr>
+                     <td>001</td>
+                     <td>Ban</td>
+                     <td>BPH</td>
+                  </tr>
+                  <tr>
+                     <td>002</td>                     
+                     <td>Meliodas</td>
+                     <td>Humas</td>
+                  </tr>
+                  <tr>
+                     <td>003</td>
+                     <td>King</td>
+                     <td>Ristek</td>
+                  </tr>
+               </table>
+            </p>
+            <p>2. Tabel dengan border collapsed
+               <table style="border-collapse: collapse;">
+                  <caption>Data Pengurus</caption>
+                  <tr>
+                     <th>ID</th>                     
+                     <th>Nama</th>
+                     <th>Divisi</th>
+                  </tr>
+                  <tr>
+                     <td>001</td>
+                     <td>Ban</td>
+                     <td>BPH</td>
+                  </tr>
+                  <tr>
+                     <td>002</td>                     
+                     <td>Meliodas</td>
+                     <td>Humas</td>
+                  </tr>
+                  <tr>
+                     <td>003</td>
+                     <td>King</td>
+                     <td>Ristek</td>
+                  </tr>
+               </table>
+            </p>
+            <p>3. Tabel dengan border spacing
+               <table style="border-spacing: 5px;">
+                  <caption>Data Pengurus</caption>
+                  <tr>
+                     <th>ID</th>                     
+                     <th>Nama</th>
+                     <th>Divisi</th>
+                  </tr>
+                  <tr>
+                     <td>001</td>
+                     <td>Ban</td>
+                     <td>BPH</td>
+                  </tr>
+                  <tr>
+                     <td>002</td>                     
+                     <td>Meliodas</td>
+                     <td>Humas</td>
+                  </tr>
+                  <tr>
+                     <td>003</td>
+                     <td>King</td>
+                     <td>Ristek</td>
+                  </tr>
+               </table>
+            </p>
+            <p>4. Colspan
+               <table>
+                  <caption>Data Pengurus</caption>
+                  <tr>
+                     <th>ID</th>                     
+                     <th>Nama</th>
+                     <th>Divisi</th>
+                     <th colspan="2">Telepon</th>
+                  </tr>
+                  <tr>
+                     <td>001</td>
+                     <td>Ban</td>
+                     <td>BPH</td>
+                     <td>665544</td>
+                     <td>887766</td>
+                  </tr>
+                  <tr>
+                     <td>002</td>                     
+                     <td>Meliodas</td>
+                     <td>Humas</td>
+                     <td>998877</td>
+                     <td>113322</td>
+                  </tr>
+                  <tr>
+                     <td>003</td>
+                     <td>King</td>
+                     <td>Ristek</td>
+                     <td>665511</td>
+                     <td>994466</td>
+                  </tr>
+               </table>
+            </p>
+            <p>5. Rowspan
+               <table>
+                  <caption>Data Pengurus</caption>
+                  <tr>
+                     <th>ID</th>
+                     <td>001</td> 
+                     <td>002</td>  
+                     <td>003</td>                     
+                  </tr>
+                  <tr>
+                     <th>Nama</th>
+                     <td>Ban</td>
+                     <td>Meliodas</td>
+                     <td>King</td>
+                  </tr>
+                  <tr>
+                     <th>Divisi</th>                   
+                     <td>BPH</td>
+                     <td>Humas</td>
+                     <td>Ristek</td>
+                  </tr>
+                  <tr>
+                     <th rowspan="2">Telepon</th>
+                     <td>665544</td>
+                     <td>998877</td>
+                     <td>665511</td>
+                  </tr>
+                  <tr>
+                     <td>887766</td>
+                     <td>113322</td>
+                     <td>994466</td>
+                  </tr>
+               </table>
+            </p>
+            <p>6. Tabel spesial (pake id)
+               <table id="ts">
+                  <caption>Data Pengurus</caption>
+                  <tr>
+                     <th>ID</th>                     
+                     <th>Nama</th>
+                     <th>Divisi</th>
+                     <th colspan="2">Telepon</th>
+                  </tr>
+                  <tr>
+                     <td>001</td>
+                     <td>Ban</td>
+                     <td>BPH</td>
+                     <td>665544</td>
+                     <td>887766</td>
+                  </tr>
+                  <tr>
+                     <td>002</td>                     
+                     <td>Meliodas</td>
+                     <td>Humas</td>
+                     <td>998877</td>
+                     <td>113322</td>
+                  </tr>
+                  <tr>
+                     <td>003</td>
+                     <td>King</td>
+                     <td>Ristek</td>
+                     <td>665511</td>
+                     <td>994466</td>
+                  </tr>
+               </table>
+            </p>
+            <hr>
+         <h2>List</h2>
+            <p><b>Unordered list</b></p>
+               <p>a. Default (bullet) : </p>
+                  <blockquote>
+                  <ul>
+                     <li>Kucing</li>
+                     <li>Macan</li>
+                     <li>Singa</li>
+                  </ul>
+                  </blockquote>
+               <p>b. disc : </p>
+                  <blockquote>
+                  <ul style="list-style-type: disc;">
+                     <li>Kucing</li>
+                     <li>Macan</li>
+                     <li>Singa</li>
+                  </ul>
+                  </blockquote>
+               <p>c. circle : </p>
+                  <blockquote>
+                  <ul style="list-style-type: circle;">
+                     <li>Kucing</li>
+                     <li>Macan</li>
+                     <li>Singa</li>
+                  </ul>
+                  </blockquote>
+               <p>d. square : </p>
+                  <blockquote>
+                  <ul style="list-style-type: square;">
+                     <li>Kucing</li>
+                     <li>Macan</li>
+                     <li>Singa</li>
+                  </ul>
+                  </blockquote>
+               <p>e. none : </p>
+                  <blockquote>
+                  <ul style="list-style-type:none">
+                     <li>Kucing</li>
+                     <li>Macan</li>
+                     <li>Singa</li>
+                  </ul>
+                  </blockquote>
+               <p>f. styled : </p>
+                  <blockquote>
+                  <ul style="margin: 0px;padding: 0px;overflow: hidden;background-color: black;">
+                     <li style="float: left;"><a style="text-decoration: none;display: block;color: white;text-align: center;padding: 16px;" href="pic/logo.jpg">Logo</a></li>
+                     <li style="float: left;"><a style="text-decoration: none;text-decoration: none;display: block;color: white;text-align: center;padding: 16px;" href="pic/bocil.jpg">Blonde</a></li>
+                     <li style="float: left;"><a style="text-decoration: none;display: block;color: white;text-align: center;padding: 16px;" href="pic/mipa.jpg">Mipa 1</a></li>
+                     <li style="float: left;"><a style="text-decoration: none;display: block;color: white;text-align: center;padding: 16px;" href="coy.html">About</a></li>
+                  </ul>
+                  </blockquote>
+               <p>g. nested :</p>
+                  <blockquote>
+                  <ul>
+                     <li>Kucing</li>
+                        <ul>
+                           <li>Anggora</li>
+                           <li>Persia</li>
+                           <li>Spynx</li>
+                        </ul>
+                     <li>Macan</li>
+                     <li>Singa</li>
+                  </ul>
+                  </blockquote>
+            <p><b>Ordered list</b></p>
+               <p>a. default (numeric) : </p>
+                  <blockquote>
+                  <ol>
+                     <li>Kucing</li>
+                     <li>Macan</li>
+                     <li>Singa</li>
+                  </ol>
+                  </blockquote>
+               <p>b. type 1 :</p>
+                  <blockquote>
+                  <ol type="1">
+                     <li>Kucing</li>
+                     <li>Macan</li>
+                     <li>Singa</li>
+                  </ol>
+                  </blockquote>
+               <p>c. type A :</p>
+                  <blockquote>
+                  <ol type="A">
+                     <li>Kucing</li>
+                     <li>Macan</li>
+                     <li>Singa</li>
+                  </ol>
+                  </blockquote>
+               <p>d. type a :</p>
+                  <blockquote>
+                  <ol type="a">
+                     <li>Kucing</li>
+                     <li>Macan</li>
+                     <li>Singa</li>
+                  </ol>
+                  </blockquote>
+               <p>e. type I :</p>
+                  <blockquote>
+                  <ol type="I">
+                     <li>Kucing</li>
+                     <li>Macan</li>
+                     <li>Singa</li>
+                  </ol>
+                  </blockquote>
+               <p>f. type i :</p>
+                  <blockquote>
+                  <ol type="i">
+                     <li>Kucing</li>
+                     <li>Macan</li>
+                     <li>Singa</li>
+                  </ol>
+                  </blockquote>
+               <p>g. control list counting :</p>
+                  <blockquote>
+                  <ol type="1" start="12">
+                     <li>Kucing</li>
+                     <li>Macan</li>
+                     <li>Singa</li>
+                  </ol>
+                  </blockquote>
+               <p>h. nested : </p>
+                  <blockquote>
+                  <ol>
+                     <li>Kucing</li>
+                        <ol type="a">
+                           <li>Anggora</li>
+                           <li>Persia</li>
+                           <li>Spynx</li>
+                        </ol>
+                     <li>Macan</li>
+                     <li>Singa</li>
+                  </ol>
+                  </blockquote>
+            <p><b>Description list</b></p>
+                  <blockquote>
+                  <dl>
+                     <dt>Kucing</dt>
+                        <dd>Kucing adalah binatang mamalia berkaki empat</dd>
+                     <dt>Macan</dt>
+                        <dd>Macan adalah binatang mamalia berkaki empat</dd>
+                     <dt>Singa</dt>
+                        <dd>Singa adalah binatang mamalia berkaki empat</dd>
+                  </dl>
+                  </blockquote>
+            <hr>
+         <h2>Block and Inline Elelments</h2>
+            <p>1. Block</p>
+               <blockquote>
+                  <p>Block-level elements ketika di summon akan menghasilkan line baru</p>
+                  <ul>
+                     <li>address</li>
+                     <li>aside</li>
+                     <li>canvas</li>
+                     <li>div</li>
+                     <li>dt</li>
+                     <li>frigcaption</li>
+                     <li>footer</li>
+                     <li>h1-h6</li>
+                     <li>hr</li>
+                     <li>main</li>
+                     <li>noscript</li>
+                     <li>p</li>
+                     <li>section</li>
+                     <li>tfoot</li>
+                     <li>video</li>
+                     <li>article</li>
+                     <li>blockquote</li>
+                     <li>dd</li>
+                     <li>dl</li>
+                     <li>fieldset</li>
+                     <li>figure</li>
+                     <li>form</li>
+                     <li>header</li>
+                     <li>li</li>
+                     <li>nav</li>
+                     <li>ol</li>
+                     <li>pre</li>
+                     <li>table</li>
+                     <li>ul</li>
+                  </ul>
+                  <p>contoh : pada penggunaan div (mirip p)</p>
+                     <blockquote>
+                        <div style="background-color: black;color: white;">
+                           <h3>Ini contoh</h3>
+                           <p>Dalam penggunaanya div menghasilkan line baru. 
+                              div tidak memerlukan atribut, tetapi style, class, dan id sering dighnakan. 
+                              Ketika di gunakan bersama dg CSS, div sering digunakan untuk menghias block, seperti halnya p.
+                           </p>
+                        </div>
+                     </blockquote>
+               </blockquote>
+            <p>2. Inline</p>
+               <blockquote>
+                  <p>Inline-level elements ketika di summon tidak akan menghasilkan line baru</p>
+                  <ul>
+                     <li>a</li>
+                     <li>acronym</li>
+                     <li>br</li>
+                     <li>bdo</li>
+                     <li>cite</li>
+                     <li>dfn</li>
+                     <li>i</li>
+                     <li>input</li>
+                     <li>label</li>
+                     <li>object</li>
+                     <li>q</li>
+                     <li>script</li>
+                     <li>small</li>
+                     <li>strong</li>
+                     <li>sup</li>
+                     <li>time</li>
+                     <li>var</li>
+                     <li>abbr</li>
+                     <li>b</li>
+                     <li>big</li>
+                     <li>button</li>
+                     <li>code</li>
+                     <li>em</li>
+                     <li>img</li>
+                     <li>kbd</li>
+                     <li>map</li>
+                     <li>output</li>
+                     <li>samp</li>
+                     <li>select</li>
+                     <li>span</li>
+                     <li>sub</li>
+                     <li>textarea</li>
+                     <li>tt</li>
+                  </ul>
+                  <p>contoh : pada penggunaan span</p>
+                     <blockquote>
+                        <p>Ini text waarnanya <span style="color: red;">red</span> kalo ini <span style="color: green;">ijo</span>.</p>
+                     </blockquote>
+               </blockquote>
+            <hr>
+         <h2>Class</h2>
+            <p>Class mirip kaya method di c++
+            <br>1. Class biasa :</p>
+               <blockquote>
+                  <h3 class="contoh">HTML Course</h3>
+                  <p class="contoh">Ini contoh yang pake class</p>
+               </blockquote>
+            <p>2. Multiple Class : </p>
+               <blockquote>
+                  <h3 class="contoh lagi">HTML Course</h3>
+                  <p class="contoh">Ini contoh yang pake multiple class</p>
+               </blockquote>
+            <p>3. Class in JavaScript :</p>
+               <blockquote>
+                  <p>Klik tombol ini untuk menyembunyikan elements yang memiliki class classjs</p>
+                  <button onclick="FungsiClass()">Hide Elements</button>
+                  <h1 class="classjs">HTML Course</h1>
+                  <p>Ini contoh yang pake JavaScript</p>
+
+                  <script>
+                     function FungsiClass() {
+                        var x = document.getElementsByClassName("classjs");
+                        for (var i=0;i<x.length;i++) {
+                           x[i].style.display = "none";
+                        }
+                     }
+                  </script>
+               </blockquote>
+            <hr>
+         <h2>Id</h2>
+            <p>id mirip seperti class tetapi hanya bisa digunakan oleh 1 elemen
+            <br>1. id dengan style : </p>
+               <blockquote>
+                  <p id="contohid">Contoh penggunaan id dengan style</p>
+               </blockquote>
+            <p>2. id dengan bookmark</p>
+               <blockquote>
+                  <a href="#HSLm"><img src="pic/logo.jpg" style="width: 50px;height:50px"> </a>
+               </blockquote>
+            <p>3. id dengan JavaScript</p>
+               <blockquote>
+                  <p id="idjs" style="fomt-size:10px">Hello World!</p>
+                  <button onclick="fungsiId()">Terus?</button>
+
+                  <script>
+                     function fungsiId() {
+                        document.getElementById("idjs").innerHTML="Jangan lupa bahagia!";
+                     }
+                  </script>
+               </blockquote>
+            <hr>
+         <h2>Iframe</h2>
+            <p>1. Iframe biasa :</p>
+               <iframe width="400" height="250" src="coy.html" title="contoh iframe"></iframe>
+            <p>2. Iframe dengan style :</p>
+               <iframe style="border: 5px dashed red;" width="400" height="250" src="coy.html" title="contoh iframe"></iframe>
+            <p>3. Iframe dengan target</p>
+               <iframe name="iframe_a" width="720" height="480" src="coy.html" title="contoh iframe"></iframe>
+               <br>
+               <a href="pic/mipa.jpg" target="iframe_a">coba klik</a>
+            <hr>
+         <h2>JavaScript</h2>
+            <p>Beberapa contoh penggunaan JavaScript :
+            <br>1. Mengubah/memunculkan konten : </p>
+               <blockquote>
+                  <p>waktu sekarang adalah : <span id="js1"></span></p>
+                  <button onclick="document.getElementById('js1').innerHTML=Date()">Click here</button>
+               </blockquote>
+            <p>2. Mengubah style :</p>
+               <blockquote>
+                  <p id="js2">Hello World!</p>
+                  <button onclick="fungsiJS1()">Ganti</button>
+                  <script>
+                     function fungsiJS1() {
+                        document.getElementById('js2').style.color="red";
+                        document.getElementById('js2').style.backgroundColor="yellow";
+                        document.getElementById('js2').style.fontSize="25px";
+                        document.getElementById('js2').style.border="2px dashed black";
+                        document.getElementById('js2').style.textAlign="center";
+                     }
+                  </script>
+               </blockquote>
+            <p>3. Mengubah atribut : </p>
+               <blockquote>
+                  <p>Try it yourself</p>
+                  <img id="imgjs" src="pic/zn.jpg" width="240" height="320">
+                  <script>
+                     function upgrade(sw) {
+                        var pic;
+                        if (sw == 0) {
+                           pic = "pic/pb.jpg"
+                        } else {
+                           pic = "pic/zn.jpg"
+                        }
+                        document.getElementById('imgjs').src=pic;
+                     }
+                  </script>
+               <p>
+                  <button onclick="upgrade(0)">Upgrade</button>
+                  <button onclick="upgrade(1)">Shit, go back</button>
+               </p>
+               </blockquote>
+            <p>4. Non-script</p>
+               <blockquote>
+                  <p id="nonjs"></p>
+                  <script>
+                     document.getElementById('nonjs').innerHTML="Ini yang support JavaScript";
+                  </script>
+                  <noscript>
+                     Maap nih gk suport JavaScript
+                  </noscript>
+               </blockquote>
+            <hr>
+         <h2>Resposive</h2>
+            <p>1. Mengatur viewport :</p>
+               <blockquote>
+                  <p>Mengatur viewport dapat dilakukan menggunakan command meta yang diletakkan di head, saya beri nama viewport</p>
+               </blockquote>
+            <p>2. Mengatur ukuran gambar :</p>
+               <blockquote>
+                  <img src="pic/bocil.jpg" style="width: max-width;height: auto;">
+               </blockquote>
+            <p>3. Mengatur gambar yang muncul berdasarkan ukuran layar :</p>
+               <blockquote>
+                  <picture>
+                     <source srcset="pic/mipa.jpg" media="(max-width:600px)">
+                     <source srcset="pic/bocil.jpg" media="(max-width:1500px)">
+                     <source srcset="pic/zn.jpg">
+                     <img src="pic/logo.jpg">
+                  </picture>
+               </blockquote>
+            <p>4. Mengatur skala text :</p>
+               <blockquote>
+                  <p style="font-size: 5vw;">Ini text yang pake satuan vw</p>
+               </blockquote>
+            <hr>
+         <h2>Computer Code Elements</h2>
+            <p>1. Keyboard Input :</p>
+               <blockquote>
+                  <p>Untuk menyimpan file klik <kbd>Ctrl+S</kbd></p>
+               </blockquote>
+            <p>2. Program Output :</p>
+               <blockquote>
+                  <p>Halaman ini menyatakan :
+                  <br><samp>Error 404 Not Found!</samp></p>    
+               </blockquote>
+            <p>3. Computer Code :</p>
+               <blockquote>
+                  <p>Berikut adalah beberapa variabel yang digunakan :<br>
+                     <code>
+                        x = 6; <br>
+                        y = 2; <br>
+                        z = x + y;
+                     </code>
+                  </p>
+               </blockquote>
+            <p>4. Variabel</p>
+               <blockquote>
+                  <p>Luas persegi panjang = <var>p</var> x <var>l</var>. 
+                     Dimana <var>p</var> menyatakan panjang dan <var>l</var> menyatakan lebar.</p>
+               </blockquote>
+            <hr>
+         <h2>Semantic Elements</h2>
+            <p>1. Section :</p>
+               <blockquote>
+                  <p>Berisi semacam sesi/bab</p>
+                     <blockquote style="background-color: gray;">
+                        <section>
+                           <h4>Pengertian Sains</h4>
+                           <p>Sains adalah ilmu pengetahuan yang mempelajari tentang kehidupan</p>
+                        </section>
+                        
+                        <section>
+                           <h4>Cabang Sains</h4>
+                           <dl>
+                              <dt>1. Fisika</dt>
+                                 <dd>Mempelajari tentang apa yang terjadi di kehidupan</dd>
+                              <dt>2. Biologi</dt>
+                                 <dd>Mempelajari tentang makhluk hidup</dd>
+                              <dt>3. Kimia</dt>
+                                 <dd>Mempelajari tentang molekul kimia beserta reaksinya</dd>
+                           </dl>
+                        </section>
+                     </blockquote>
+               </blockquote>
+            <p>2. Article :</p>
+               <blockquote>
+                  <p>Berisi tentang informasi yang independen dan tidak terkait dengan elemen lain, contoh</p>
+                  <ul>
+                     <li>Forum post</li>
+                     <li>Blog post</li>
+                     <li>Artikel koran</li>
+                  </ul>
+                     <blockquote style="background-color: gray;">
+                        <h3>Sains</h3>
+                        <article style="background-color: white;margin: 10px;padding: 5px;">
+                           <h4 style="margin: 4px;">Fisika</h4>
+                           <p style="margin: 4px;">Mempelajari tentang apa yang terjadi di kehidupan</p>
+                        </article>
+                        <br>
+                        <article style="background-color: white;margin: 10px;padding: 5px;">
+                           <h4 style="margin: 4px;">Biologi</h4>
+                           <p style="margin: 4px;">Mempelajari tentang makhluk hidup</p>
+                        </article>
+                        <br>
+                        <article style="background-color: white;margin: 10px;padding: 5px;">
+                           <h4 style="margin: 4px;">Kimia</h4>
+                           <p style="margin: 4px;">Mempelajari tentang molekul kimia beserta reaksinya</p>
+                        </article>
+                        <br>
+                     </blockquote>
+               </blockquote>
+            <p>3. Header :</p>
+               <blockquote>
+                  <p>Berisi informasi pembuka, contoh </p>
+                  <ul>
+                     <li>Heading element (h1-h6)</li>
+                     <li>Logo atau icon</li>
+                     <li>Informasi Author</li>
+                  </ul>
+                     <blockquote style="border:solid;">
+                        <article style="margin:20px">
+                           <header> 
+                              <h4>Apa itu sains?</h4>
+                              <p>Pengertian Sains</p>
+                           </header>
+                           <p>Sains adalah ilmu pengetahuan yang mempelajari tentang kehidupan</p>
+                        </article>
+                     </blockquote>
+               </blockquote>
+            <p>4. Footer :</p>
+               <blockquote>
+                  <p>Berisi informasi penutup, contoh </p>
+                  <ul>
+                     <li>Informasi hak cipta</li>
+                     <li>Kontak</li>
+                     <li>Informasi Author</li>
+                     <li>Sitemap</li>
+                     <li>Back to top (bookmark)</li>
+                     <li>Dokumen terkait</li>
+                  </ul>
+                     <blockquote style="border:solid;">
+                        <footer style="margin:20px">
+                           <p>Author : Mikasa Ackerman</p>
+                           <p>Email : <a href="mailto:example@gmail.com">example@gmail.com</a></p>
+                        </footer>
+                     </blockquote>
+               </blockquote>
+            <p>5. Navigation :</p>
+               <blockquote>
+                  <p>Biasanya berisi link/menu</p>
+                     <blockquote>
+                        <br>
+                        <nav style="background-color: white;">
+                           <a href="coy.html">Home</a> |
+                           <a href="pic/bocil.jpg">Sweet</a> |
+                           <a href="pic/mipa.jpg">Home</a> 
+                        </nav>
+                        <br>
+                     </blockquote>
+               </blockquote>
+            <p>6. Aside :</p>
+               <blockquote>
+                  <p>Berisi konten sampingan dan tidak berhubungan dengan konten utama</p>
+                     <blockquote style="border:solid;">
+                        <article style="margin:20px">
+                           <p>Ini konten utama. Ini konten utama. Ini konten utama. Ini konten utama. 
+                              Ini konten utama. Ini konten utama. Ini konten utama. Ini konten utama. 
+                              Ini konten utama. Ini konten utama. Ini konten utama. Ini konten utama. 
+                           </p>
+                           <aside style="width: 30%;padding-left: 15px;margin-left: 15px;float: right;background-color: gray;">
+                              Ini konten sampingan. Ini konten sampingan. Ini konten sampingan. Ini konten sampingan. 
+                              Ini konten sampingan. Ini konten sampingan. Ini konten sampingan. Ini konten sampingan. 
+                           </aside>
+                           <p>Ini konten utama. Ini konten utama. Ini konten utama. Ini konten utama. 
+                              Ini konten utama. Ini konten utama. Ini konten utama. Ini konten utama. 
+                              Ini konten utama. Ini konten utama. Ini konten utama. Ini konten utama. 
+                           </p>
+                           <p>Ini konten utama. Ini konten utama. Ini konten utama. Ini konten utama. 
+                              Ini konten utama. Ini konten utama. Ini konten utama. Ini konten utama. 
+                              Ini konten utama. Ini konten utama. Ini konten utama. Ini konten utama. 
+                           </p>
+                        </article>
+                     </blockquote>
+               </blockquote>
+            <p>7. Figure & Figure Caption :</p>
+               <blockquote>
+                  <p>Figure berisi gambar, sedangkan figure caption berisi judul gambar tersebut.</p>
+                     <blockquote>
+                        <figure>
+                           <img src="pic/logo.jpg" style="width: 280px;height: 280px;">
+                           <figcaption>Logo Informatika Unsoed Angkatan 2020</figcaption>
+                        </figure>
+                     </blockquote>
+               </blockquote>
+            <p>8. Others :</p>
+               <blockquote>
+                  <dl>
+                     <dt>1. details </dt>
+                        <dd>Berisi detail tambahan yang bisa dilihat dan sembbunyikan</dd>
+                     <dt>2. main</dt>
+                        <dd>Menspesifikasi konten utama</dd>
+                     <dt>3. mark</dt>
+                        <dd>Mendefinisikan teks yang di tandai/highlight</dd>
+                     <dt>4. summari</dt>
+                        <dd>Define a visible heading for the details element</dd>
+                     <dt>5. time</dt>
+                        <dd>Mendefinisikan tanggal/waktu</dd>
+                  </dl>
+               </blockquote>
+            <hr>
+         <h2>Entities</h2>
+            <p>Cara menulis beberapa simbol yang terbaca sebagai code :</p>
+               <blockquote>
+                  <ul>
+                     <li>non breaking space : a&nbsp;&nbsp;&nbsp;&nbsp;b atau a&#160;&#160;&#160;&#160;b</li>
+                     <li>less than : &lt; atau &#60; </li>
+                     <li>greater than : &gt; atau &#62;</li>
+                     <li>and many more</li>
+                  </ul>
+               </blockquote>
+            <p>Bisa juga berisi simbol lain yang tidak ada di dalam keyboard</p>
+            <hr>
+         <h2>Character Set</h2>
+            <p>Berikut beberapa charset yang ada :
+               <blockquote>
+                  <ul>
+                     <li>ASCII : 128 character</li>
+                     <li>ISO-8859-1 : 256 character</li>
+                     <li>ANSI : 288 character</li>
+                     <li>UTF-8 : komplit</li>
+                  </ul>
+               </blockquote>
+            <hr>
+         <h2>Uniform Resource Locators</h2>
+            <p>URL atau web address bisa berupa huruf (ex : www.facebook.com) atau IP address (ex : 198.53.76.32).</p>
+            <p>Skemanya sebagai berikut : scheme://prefix.domain:port/path/filename
+            <br>Contoh : https://www.w3schools.com/html/default.asp
+               <blockquote>
+                  <ul>
+                     <li>scheme - define the type of internet service (most common is http or https)</li>
+                     <li>prefix - define a domain prefix (default for http is www)</li>
+                     <li>domain - define the internet domain name (like facebook.com)</li>
+                     <li>port - define the port number at the host (default for http is 80)</li>
+                     <li>path - define a path at the server (if ommitted: the root directory of the site)</li>
+                     <li>filename - define the name of a document or resource</li>
+                  </ul>
+               </blockquote>
+            </p>
+            <hr>
+         <h2>Media</h2>
+            <p>Video</p>
+               <blockquote>
+                  <video width="320" height="240" controls>
+                     <source src="pic/bukber.mp4" type="video/mp4">
+                     Maaf browser anda tidak support video.
+                  </video>
+               </blockquote>
+            <p>Audio</p>
+               <blockquote>
+                  <audio controls>
+                     <source src="pic/sunshine.mp3" type="audio/mpeg">
+                     Maaf browser anda tidak support audio.
+                     </audio>
+               </blockquote>
+
+               
+   </body>
+   <!-- Ini komentar nlisnya kaya gini bro --> 
+</html>
+
+
+
+
+
+
